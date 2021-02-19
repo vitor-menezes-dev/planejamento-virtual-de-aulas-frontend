@@ -1,0 +1,14 @@
+<ion-header >
+  <ion-grid *ngIf="showFilter">
+    <ng-content></ng-content>
+    <ion-row>
+      <ion-searchbar placeholder="" animated></ion-searchbar>
+    </ion-row>
+  </ion-grid>
+  <ion-button size="small" class="ion-no-padding" expand="block" fill="clear" (click)="showFilter=!showFilter"
+    style="margin:0; height: auto;">
+    <ion-icon slot="icon-only" name="search"> </ion-icon>
+    <ion-icon slot="icon-only" name="chevron-down-outline" *ngIf="!showFilter"></ion-icon>
+    <ion-icon slot="icon-only" name="chevron-up-outline" *ngIf="showFilter"></ion-icon>
+  </ion-button>
+</ion-header>
